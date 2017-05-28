@@ -1,0 +1,10 @@
+
+.status-bar {
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: green;
+    min-height: 26px;
+}
