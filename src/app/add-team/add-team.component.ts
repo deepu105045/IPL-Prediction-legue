@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn, FormArray } from '@angular/forms';
 import { Team } from './team';
-import { Tournament } from './tournament'
+import { Tournament } from './tournament';
 
 @Component({
   selector: 'add-team',
@@ -9,15 +9,12 @@ import { Tournament } from './tournament'
   styleUrls: ['./add-team.component.css']
 })
 export class AddTeamComponent implements OnInit {
-
-  constructor(private _fb: FormBuilder) { }
-
   addTeamForm: FormGroup;
   name: string;
   code: string;
   team: Team;
   errorMsg: string;
-
+  constructor(private _fb: FormBuilder) { }
   ngOnInit() {
     this.addTeamForm = this._fb.group({
       tournamentName: ['', Validators.required],
@@ -27,19 +24,11 @@ export class AddTeamComponent implements OnInit {
       teamName: ['', Validators.required],
     });
 
-
-    
   }
 
   saveSchedule() {
-    console.log(this.addTeamForm)
-    // this.team = new Team();
-    // this.team.code = this.addTeamForm.controls.code.value;
-    // this.team.name = this.addTeamForm.controls.name.value;
-
-    // this._teamConfigService.addTeam(this.team)
-    //   .subscribe(
-    //   teamsResponseObj => teamsResponseObj,
-    //   responseErrorData => responseErrorData);
+    this.team = new Team();
+    this.team.code = this.addTeamForm.controls.code.value;
+    this.team.name = this.addTeamForm.controls.name.value;
   }
 }

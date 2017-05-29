@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { FramworkBodyComponent } from './framwork-body/framwork-body.component';
-import { ContentComponent } from './content/content.component'
+import { ContentComponent } from './content/content.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { StatusBarComponent } from './status-bar/status-bar.component'
+import { StatusBarComponent } from './status-bar/status-bar.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { MenuComponent } from './menus/menu/menu.component';
 
@@ -27,11 +27,11 @@ import { MenuService } from './services/menu.service';
     MenuItemComponent,
     MenuComponent
   ],
-  providers:[
+  providers: [
     FrameworkConfigService,
     MenuService
   ],
-  exports:[
+  exports: [
     FramworkBodyComponent
   ]
 })

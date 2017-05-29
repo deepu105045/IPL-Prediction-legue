@@ -4,7 +4,6 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "setup1": "json-server /Users/deepuvelappannair/Documents/Personal/Angular/iplPredictoinLegue/src/app/data/teams.json",
     "setup": "node server",
     "start": "ng serve",
     "build": "ng build",

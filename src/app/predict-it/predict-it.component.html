@@ -1,44 +1,28 @@
-
 <div class="container table-responsive">
-  <h2>Use your brain and predict it.</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Your Prediction</th>
+        <th>Actual results</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
+      <tr *ngFor="let gameLine of gameLines" class="success">
+        <td>{{gameLine.gameDateTime}}</td>
+        <td>{{gameLine.venue}}</td>
+        <td>{{gameLine.team1}}</td>
+        <td>{{gameLine.team2}}</td>
+        <td>
+           <select>
+              <option>{{gameLine.team1}}</option>
+              <option>{{gameLine.team2}}</option>
+           </select>
+        </td>
+        <td>{{gameLine.team2}}</td>
       </tr>
     </tbody>
   </table>

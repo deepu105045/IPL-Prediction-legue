@@ -1,8 +1,14 @@
-<nav class="container">
-  <ul class="nav nav-pills row">
-    <li class="col-md-2" *ngFor="let item of menuService.items">
-      <fw-menu-item [item]="item">
-      </fw-menu-item>
-    </li>
-  </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Home Page</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li *ngFor="let item of menuService.items">
+        <a>
+          <fw-menu-item [item]="item"></fw-menu-item>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IplteamService } from '../../services/ipl-team.service';
 
 @Component({
-  selector: 'iplTeam-dropdown',
+  selector: 'ipl-team-dropdown',
   templateUrl: './iplTeam-dropdown.component.html',
   styleUrls: ['./iplTeam-dropdown.component.css'],
   providers: [
@@ -15,14 +15,11 @@ import { IplteamService } from '../../services/ipl-team.service';
   ]
 })
 export class IplTeamDropdownComponent implements OnInit, ControlValueAccessor {
-
-  constructor(private _iplTeamService: IplteamService) { }
   @Output() itemSelected: EventEmitter<string> = new EventEmitter<string>();
-
   teams: any = [];
-  selectedTeam: string = "Select team";
+  selectedTeam = 'Select team';
   errorMsg: string;
-
+  constructor(private _iplTeamService: IplteamService) { }
   ngOnInit() {
     this._iplTeamService.getTeams()
       .subscribe(

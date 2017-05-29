@@ -1,8 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Tournament = require('../models/tournament');
-
-
 const router = express.Router();
 
 router.get('/tournaments', function (req, res) {

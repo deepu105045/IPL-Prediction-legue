@@ -7,9 +7,5 @@ import { FrameworkConfigService } from '../services/framework-config.service';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent  {
-
-  constructor(private frameworkConfigService:FrameworkConfigService) { }
-
-  
-
+  constructor(private frameworkConfigService: FrameworkConfigService) { }
 }

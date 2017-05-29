@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FrameworkModule } from '../framework/framework.module';
 
 import { IplteamService } from './services/ipl-team.service';
-import { TournamentService } from './services/tournament.service'
+import { TournamentService } from './services/tournament.service';
 import { appRoutes } from './routing/app.routing';
 
 import { AppComponent } from './app.component';
@@ -34,7 +34,7 @@ import { PredictItComponent } from './predict-it/predict-it.component';
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ IplteamService,TournamentService ],
+  providers: [ IplteamService, TournamentService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

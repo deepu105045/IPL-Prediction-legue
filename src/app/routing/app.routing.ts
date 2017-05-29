@@ -6,8 +6,8 @@ import { PredictItComponent} from '../predict-it/predict-it.component';
 
 export const appRoutes: Routes = [
     { path: '', component: GameSchedulerComponent },
-    { path:'game-scheduler', component: GameSchedulerComponent},
-    { path:'prediction-rules', component: PredictionRulesComponent},
+    { path: 'game-scheduler', component: GameSchedulerComponent},
+    { path: 'prediction-rules', component: PredictionRulesComponent},
     { path: 'add-team', component: AddTeamComponent},
     { path: 'predict-it', component: PredictItComponent}
 ];

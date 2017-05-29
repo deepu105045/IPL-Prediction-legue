@@ -49,16 +49,14 @@
 
                   <div class="col-sm-5">
                     <span>
-                      <iplTeam-dropdown (itemSelected)='setTeam1($event)' formControlName="team1" ></iplTeam-dropdown>
+                      <ipl-team-dropdown (itemSelected)='setTeam1($event)' formControlName="team1" ></ipl-team-dropdown>
                     </span>
                     <span>v/s</span>
                     <span>
-                      <iplTeam-dropdown (itemSelected)='setTeam2($event)' formControlName="team2"></iplTeam-dropdown>
+                      <ipl-team-dropdown (itemSelected)='setTeam2($event)' formControlName="team2"></ipl-team-dropdown>
                     </span>
-                    <span (click)="removeGameLine(i)" class="glyphicon glyphicon-remove"> </span>
+                    <span (click)="removeGameLine(i)" > Remove</span>
                   </div>
-
-
                 </div>
               </div>
 
@@ -69,6 +67,7 @@
               </div>
             </div>
             <button class="btn btn-primary" type="button" (click)="saveSchedule()">Submit</button>
+            <button class="btn btn-primary" type="Cancel" >Cancel</button>
             <div>
             </div>
           </form>
